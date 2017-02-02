@@ -9,8 +9,8 @@ public class SuhDude extends JFrame implements ActionListener
 	JTextArea inputText, outputText;
 	JScrollPane inputPane, outputPane;
 	
-	//encoded by letter in base 5
-	//suh 5's unit, dude 1's unit
+	//encoded by letter in base 6
+	//suh 6's unit, dude 1's unit
 	//extra u so 'a' = suh dude
 	//suuuh 	duude
 	//2 u=10	1 u=1
