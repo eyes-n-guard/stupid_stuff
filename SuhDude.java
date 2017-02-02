@@ -87,11 +87,17 @@ public class SuhDude extends JFrame implements ActionListener
 	    		else if(letter == '.')
 	    			output += "later dude ";
 	    		else if(letter == '!')
+	    			output += "holy camoli ";
+	    		else if(letter == '?')
 	    			output += "woah dude ";
 	    	}
     	}
     	else
     	{
+    		if(message.charAt(message.length()-1) != ' ')
+    			message += " ";
+    		
+    		output = message.replace("yea ", " ").replace(" uh ", " ,").replace("later dude ", ".").replace("woah dude ", "?").replace("holy camoli ", "!");
 			String letter;
 			for(int i=0;i < 26;i++)
 			{
@@ -104,11 +110,11 @@ public class SuhDude extends JFrame implements ActionListener
 		    		letter += "u";
 		    		
 		    	letter += "de ";
-		    	message = message.replace(letter, "" + (char)(i+'a'));
-		    	System.out.println(message);
+		    	output = output.replace(letter, "" + (char)(i+'a'));
+		    	//System.out.println(message);
 			}
 			
-    		output = message.replace("yea ", " ").replace(" uh ", " ,").replace("later dude ", ".").replace("woah dude ", "!");
+    		
     	}
     	
     	outputText.setText(output);
